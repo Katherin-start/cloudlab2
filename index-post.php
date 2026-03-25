@@ -2,11 +2,11 @@
 include("conexion.php");
 $con = conexion();
 
-$doc = $_POST["doc"];
-$nom = $_POST["nom"];
-$ape = $_POST["ape"];
-$dir = $_POST["dir"];
-$cel = $_POST["cel"];
+$doc = substr($_POST["doc"], 0, 50);
+$nom = substr($_POST["nom"], 0, 50);
+$ape = substr($_POST["ape"], 0, 50);
+$dir = substr($_POST["dir"], 0, 50);
+$cel = substr($_POST["cel"], 0, 50);
 
 $sql = "insert into persona values(default,'$doc','$nom','$ape','$dir','$cel')";
 
